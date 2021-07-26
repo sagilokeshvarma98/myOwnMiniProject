@@ -1,0 +1,35 @@
+.card{
+    width: 350px;
+    height: 400px;
+    float: left;
+    margin: 0px 50px 30px 50px;
+}
+
+.card img{
+    height: 200px;
+    width: 240px;
+}
+
+.card-footer{
+    padding: 5px;
+}
+
+.star {
+    position: relative;
+    display: inline-block;
+    color: #d3d3d3;
+  }
+  .full {
+    color: red;
+  }
+  .half {
+    position: absolute;
+    display: inline-block;
+    overflow: hidden;
+    color: red;
+  }
+
+  #filter{
+    margin-top: 30px;
+    width: 150px;
+  }
