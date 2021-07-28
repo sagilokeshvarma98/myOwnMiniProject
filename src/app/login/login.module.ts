@@ -5,13 +5,17 @@ import { LoginRoutingModule } from './login-routing.module';
 import { RegisterComponent } from './register/register.component';
 import { SigninComponent } from './signin/signin.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
+import { SuccessfulRegistrationComponent } from './successful-registration/successful-registration.component';
+import { PasswordShowDirective } from './directives/password-show.directive';
 
 
 @NgModule({
   declarations: [
     RegisterComponent,
     SigninComponent,
-    ForgotPasswordComponent
+    ForgotPasswordComponent,
+    SuccessfulRegistrationComponent,
+    PasswordShowDirective
   ],
   imports: [
     CommonModule,

@@ -13,4 +13,8 @@ export class LoginService {
      return this.hp.post("http://localhost:5300/loginData",data)
   }
 
+  logout(){
+    localStorage.removeItem("username")
+  }
+
 }

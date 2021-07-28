@@ -12,8 +12,11 @@ export class FilterPipe implements PipeTransform {
     return products.sort((x,y)=> y.price - x.price )
     else if(filterTerm === "rating")
     return products.sort((x,y)=> y.rating - x.rating )
+    else if(filterTerm === "n/ame")
+    return products.sort((a, b) => a.title.localeCompare(b.title))
     else
     return products
+    
     
   }
 

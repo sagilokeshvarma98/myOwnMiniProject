@@ -23,8 +23,7 @@ export class SigninComponent implements OnInit {
   inputClass:string = "loginForm"
 
   ngOnInit(): void {
-    console.log(this.inputClass);
-    
+    this.ls.logout()
   }
 
   get controls(){

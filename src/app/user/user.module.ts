@@ -8,6 +8,7 @@ import { CartNotifyComponent } from './cart-notify/cart-notify.component';
 import { CartButtonComponent } from './cart-button/cart-button.component';
 import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
 import { FilterPipe } from './pipes/filter.pipe';
+import { ItemDisplayComponent } from './item-display/item-display.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { FilterPipe } from './pipes/filter.pipe';
     ProductsDisplayComponent,
     CartNotifyComponent,
     CartButtonComponent,
-    FilterPipe
+    FilterPipe,
+    ItemDisplayComponent
   ],
   imports: [
     CommonModule,

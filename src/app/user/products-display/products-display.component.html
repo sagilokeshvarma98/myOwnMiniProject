@@ -1,6 +1,8 @@
+<a routerLink="/login">logout</a>
 <div id="filter">
     <select id="inputState" class="form-control" (change)="viewFilterType($event)">
         <option selected>Filter</option>
+        <option value="name">Name</option>
         <option value="high to low">price : high to loww</option>
         <option value="low to high">price : low to high</option>
         <option value="rating">rating</option>
@@ -9,7 +11,7 @@
 <div class="container-fluid" style="margin-top: 5%;">
        
 <div *ngFor="let x of Products | filter : filterTerm">
-    <div class="card">
+    <div class="card" (click)="getItem(x)">
         <div class="card-body">
             <img class="productImage" src={{x.image}} alt="image">
         </div>
@@ -31,9 +33,6 @@
 </div>
 </div>
 </div>
-
-
-
 <div *ngIf="NotifyAddedToCart">
     <app-cart-notify></app-cart-notify>
 </div>

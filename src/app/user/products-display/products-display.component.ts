@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductsService } from 'src/app/services/products.service';
 import {FormControl, Validators} from '@angular/forms';
+import { ItemDataService } from 'src/app/services/item-data.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-products-display',
@@ -9,7 +11,7 @@ import {FormControl, Validators} from '@angular/forms';
 })
 export class ProductsDisplayComponent implements OnInit {
 
-  constructor(public PS:ProductsService) { }
+  constructor(public PS:ProductsService, public itemData:ItemDataService , private route:Router) { }
 
   ctrl = new FormControl(null, Validators.required);
 
@@ -41,5 +43,10 @@ export class ProductsDisplayComponent implements OnInit {
 
   viewFilterType(event:any){
    this.filterTerm =  event.target.value
+  }
+
+  getItem(x:Object){
+    this.itemData.getDataOfItem(x)
+    this.route.navigate(["/itemData"])
   }
 }
