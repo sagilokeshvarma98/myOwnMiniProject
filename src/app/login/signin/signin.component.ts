@@ -34,12 +34,19 @@ export class SigninComponent implements OnInit {
     console.log("error occured");
   }
 
+  controller(){
+
+  }
+
   submit(){
     let username = this.loginForm.value.username
     if(username=="user" || username=="admin"){
       this.ls.login(this.loginForm.value).subscribe(res=>{
-        localStorage.setItem("username",username)
+        console.log(res);
         this.route.navigate([`/${username}`])
+       },
+       error=>{
+         console.log(error);
        }
        )
     }

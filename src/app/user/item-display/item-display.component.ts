@@ -11,6 +11,7 @@ export class ItemDisplayComponent implements OnInit {
   constructor(private itemData:ItemDataService) { }
 
   ngOnInit(): void {
+    console.log(sessionStorage.getItem("itemData"));
   }
 
 }

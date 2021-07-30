@@ -1,13 +1,13 @@
 .card{
-    width: 320px;
-    height: 400px;
+    width: 160px;
+    height: 300px;
     float: left;
     margin: 0px 50px 30px 50px;
 }
 
 .card img{
-    height: 200px;
-    width: 240px;
+    height: 150px;
+    width: 140px;
 }
 
 .card-footer{
